@@ -1,0 +1,71 @@
+.crypto-grid-container {
+  padding: 40px 0;
+}
+
+.crypto-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--amazon-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amazon-text);
+}
+
+.control-select {
+  padding: 8px 12px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 3px;
+  font-size: 14px;
+  background: var(--amazon-white);
+  cursor: pointer;
+}
+
+.control-select:focus {
+  outline: none;
+  border-color: var(--amazon-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.1);
+}
+
+.results-count {
+  font-size: 14px;
+  color: var(--amazon-dark-gray);
+  font-weight: 500;
+}
+
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .crypto-controls {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .control-group {
+    justify-content: space-between;
+  }
+  
+  .crypto-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+} 

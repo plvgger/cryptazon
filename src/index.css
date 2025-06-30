@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3f3;
+  color: #0f1111;
+}
+
+:root {
+  --amazon-orange: #ff9900;
+  --amazon-dark-orange: #e47911;
+  --amazon-blue: #232f3e;
+  --amazon-light-blue: #37475a;
+  --amazon-yellow: #febd69;
+  --amazon-white: #ffffff;
+  --amazon-gray: #f3f3f3;
+  --amazon-dark-gray: #333333;
+  --amazon-border: #ddd;
+  --amazon-text: #0f1111;
+  --amazon-link: #0066c0;
+  --amazon-price: #b12704;
+  --amazon-success: #007600;
+  --amazon-error: #c40000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  color: #111;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.btn-secondary {
+  background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+  border: 1px solid #adb1b8;
+  color: #111;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: linear-gradient(to bottom, #e7eaf6, #d9dce9);
+}
+
+.card {
+  background: var(--amazon-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price {
+  color: var(--amazon-price);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price-change {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price-change.positive {
+  color: var(--amazon-success);
+}
+
+.price-change.negative {
+  color: var(--amazon-error);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: var(--amazon-dark-gray);
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--amazon-border);
+  border-top: 4px solid var(--amazon-orange);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: var(--amazon-error);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 16px;
+}
+
+.searching-indicator {
+  color: var(--amazon-orange);
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: var(--amazon-dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: var(--amazon-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin-bottom: 4px;
+}
+
+.clear-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Success overlay for crypto cards */
+.crypto-card.success {
+  position: relative;
+}
+
+.success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 118, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .search-results-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .search-info h2 {
+    font-size: 18px;
+  }
+} 

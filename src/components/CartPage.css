@@ -1,0 +1,241 @@
+.cart-page {
+  background: var(--amazon-gray);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.cart-header {
+  background: var(--amazon-white);
+  padding: 20px;
+  border-bottom: 1px solid var(--amazon-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin: 0;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--amazon-link);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 102, 192, 0.1);
+}
+
+.clear-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid var(--amazon-error);
+  color: var(--amazon-error);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.clear-cart-btn:hover {
+  background: var(--amazon-error);
+  color: white;
+}
+
+.cart-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+
+.cart-items {
+  background: var(--amazon-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid var(--amazon-border);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.item-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin: 0 0 4px 0;
+}
+
+.item-symbol {
+  font-size: 12px;
+  color: var(--amazon-dark-gray);
+  font-weight: 500;
+}
+
+.item-price {
+  font-size: 14px;
+  color: var(--amazon-price);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.item-quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-quantity label {
+  font-size: 12px;
+  color: var(--amazon-dark-gray);
+}
+
+.item-quantity .quantity-input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.item-total {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--amazon-price);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--amazon-error);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background: rgba(196, 0, 0, 0.1);
+}
+
+.cart-summary {
+  background: var(--amazon-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.cart-summary h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin: 0 0 20px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--amazon-price);
+  border-top: 1px solid var(--amazon-border);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--amazon-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.empty-cart h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin: 20px 0 12px 0;
+}
+
+.empty-cart p {
+  font-size: 16px;
+  color: var(--amazon-dark-gray);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .cart-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .cart-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .item-quantity {
+    align-items: center;
+  }
+  
+  .remove-btn {
+    justify-self: center;
+  }
+} 

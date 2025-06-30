@@ -1,0 +1,121 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--amazon-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 400px;
+  z-index: 1001;
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-success {
+  border-left: 4px solid var(--amazon-success);
+}
+
+.notification-error {
+  border-left: 4px solid var(--amazon-error);
+}
+
+.notification-warning {
+  border-left: 4px solid #f59e0b;
+}
+
+.notification-info {
+  border-left: 4px solid var(--amazon-link);
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.notification-success .notification-icon {
+  background: rgba(0, 118, 0, 0.1);
+  color: var(--amazon-success);
+}
+
+.notification-error .notification-icon {
+  background: rgba(196, 0, 0, 0.1);
+  color: var(--amazon-error);
+}
+
+.notification-warning .notification-icon {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.notification-info .notification-icon {
+  background: rgba(0, 102, 192, 0.1);
+  color: var(--amazon-link);
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  font-size: 13px;
+  color: var(--amazon-dark-gray);
+  line-height: 1.4;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: var(--amazon-dark-gray);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Multiple notifications */
+.notification + .notification {
+  margin-top: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+} 

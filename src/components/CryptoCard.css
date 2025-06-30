@@ -1,0 +1,272 @@
+.crypto-card {
+  background: var(--amazon-white);
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.crypto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-color: var(--amazon-orange);
+}
+
+.crypto-card.hovered::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--amazon-orange);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.crypto-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.2s;
+}
+
+.crypto-info:hover {
+  opacity: 0.8;
+}
+
+.crypto-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.crypto-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.crypto-symbol {
+  font-size: 12px;
+  color: var(--amazon-dark-gray);
+  font-weight: 500;
+}
+
+.crypto-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-details-btn {
+  background: none;
+  border: none;
+  color: var(--amazon-link);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-details-btn:hover {
+  background: rgba(0, 102, 192, 0.1);
+}
+
+.crypto-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--amazon-dark-gray);
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.current-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--amazon-price);
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.price-change.positive {
+  color: var(--amazon-success);
+  background: rgba(0, 118, 0, 0.1);
+}
+
+.price-change.negative {
+  color: var(--amazon-error);
+  background: rgba(196, 0, 0, 0.1);
+}
+
+.market-info {
+  margin-bottom: 16px;
+}
+
+.market-stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.stat-label {
+  color: var(--amazon-dark-gray);
+}
+
+.stat-value {
+  font-weight: 600;
+  color: var(--amazon-text);
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.quantity-section label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amazon-text);
+  min-width: 60px;
+}
+
+.quantity-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.quantity-input:focus {
+  border-color: var(--amazon-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.1);
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--amazon-price);
+  text-align: center;
+  padding: 12px;
+  background: var(--amazon-gray);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.buy-now-btn {
+  flex: 2;
+  font-weight: 600;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.card-features {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--amazon-border);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--amazon-dark-gray);
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .crypto-card {
+    padding: 16px;
+  }
+  
+  .price-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .current-price {
+    font-size: 20px;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+  }
+  
+  .buy-now-btn,
+  .add-to-cart-btn {
+    flex: none;
+  }
+  
+  .card-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .feature {
+    flex-direction: row;
+    justify-content: center;
+  }
+} 

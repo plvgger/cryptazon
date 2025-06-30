@@ -1,0 +1,55 @@
+.contract-address-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.ca-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.ca-label {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.ca-value {
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  word-break: break-all;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.ca-note {
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ca-container {
+    padding: 0 16px;
+  }
+  
+  .ca-label {
+    font-size: 16px;
+  }
+  
+  .ca-value {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+} 

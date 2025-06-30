@@ -8,7 +8,7 @@ const ContractAddressDisplay = () => {
         <div className="ca-label">CA:</div>
         <div className="ca-value">
           {/* Replace this with your actual contract address */}
-          7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
+          Coming Soon
         </div>
       </div>
     </div>
